@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceWhiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">PriceWhiz</h1>
+        <p class="subtitle">An E-commerce Product Price Tracker</p>
+        
+        <form id="product-form" method="POST" action="/" onsubmit="return handleFormSubmit();">
+            <label for="product_name">Enter Product Name:</label>
+            <input type="text" name="product_name" id="product_name" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="loading" style="display: none;">Searching for the best prices...</div>
+
+        {% if prices %}
+        <h2>Results for "{{ product_name }}"</h2>
+        <div class="result">
+            <div class="card">
+                <h3>Flipkart</h3>
+                <p><strong>Product:</strong> {{ prices['Flipkart']['name'] }}</p>
+                <p><strong>Price:</strong> ₹{{ prices['Flipkart']['price'] }}</p>
+                <p><a href="{{ prices['Flipkart']['url'] }}" target="_blank">View on Flipkart</a></p>
+            </div>
+            <div class="card">
+                <h3>Amazon</h3>
+                <p><strong>Product:</strong> {{ prices['Amazon']['name'] }}</p>
+                <p><strong>Price:</strong> ₹{{ prices['Amazon']['price'] }}</p>
+                <p><a href="{{ prices['Amazon']['url'] }}" target="_blank">View on Amazon</a></p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

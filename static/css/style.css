@@ -1,0 +1,106 @@
+/* Set the main font color to white over the background */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white; /* Set default text color to white */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Slight transparency for better text readability */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Main title with cursive font and white color */
+.main-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 80px; /* Increased font size for "PriceWhiz" */
+    font-weight: bold;
+    color: white; /* Ensures main title is in white */
+    margin: 0;
+}
+
+/* Subtitle with a different font style */
+.subtitle {
+    font-family: 'Times New Roman', serif; /* Changed font family to Times New Roman */
+    font-size: 22px; /* Increased font size for subtitle */
+    color: #f0f0f0; /* Slightly off-white for contrast */
+    margin-bottom: 20px;
+}
+
+/* Label for "Enter Product Name:" with a different font style */
+label {
+    font-family: 'Georgia', serif; /* Changed font family to Georgia */
+    font-size: 22px; /* Increased font size */
+    color: white; /* Ensures label text is visible */
+    margin-top: 15px;
+    display: block;
+}
+
+/* Form input field and button styling */
+input[type="text"] {
+    padding: 8px;
+    width: 80%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333; /* Text input remains dark */
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#loading {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Result card styling */
+.result {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Transparent for background visibility */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    color: white; /* Ensure text in cards is white */
+}
+
+.card h3 {
+    color: white;
+}
+
+.card a {
+    color: #add8e6; /* Light blue for link contrast */
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
